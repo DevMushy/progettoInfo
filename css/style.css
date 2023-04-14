@@ -10,16 +10,16 @@
 }
 .title {
   margin-top: 3rem;
-  font-size: large;
+  font-size: x-large;
   font-family: "Sedgwick Ave Display", cursive;
 }
 .card-c {
   margin-top: 0.5rem;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
   text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -3px #00000046;
 }
 .card-c:hover{
     transition: 1s;
@@ -27,16 +27,23 @@
 }
 .card-c:hover img{
     transition: 1s;
-    opacity: 0.8;
+    opacity: 0.5;
 }
-.card-c:hover button{
-    transition: 1s;
-opacity: 1;
-background-color: rgb(131, 57, 7);
+.card-c button:hover {
+  transition: 1.3s;
+  background-color: rgb(245, 168, 26);
+  box-shadow: 0 0 5px orange,
+  0 0 10px orange,
+  0 0 20px orange;
+ 
+
 }
 .card-c button {
-  background-color: rgb(202, 88, 13);
-  color: aliceblue;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 5px rgb(0, 0, 0),
+  0 0 10px rgb(0, 0, 0);
+  
+  color: rgb(255, 255, 255);
   font-size: large;
   border: none;
   border-radius: 0.3rem;
@@ -51,6 +58,7 @@ background-color: rgb(131, 57, 7);
 }
 .card-c img {
   width: 85%;
+
 }
 .map{
     text-align: center;
@@ -59,4 +67,131 @@ background-color: rgb(131, 57, 7);
 .map iframe{
 
     border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
+
+/*Media Queri*/
+
+/* (320x480) iPhone (Original, 3G, 3GS) */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* insert styles here */
+}
+
+/* (320x480) Smartphone, Portrait */
+@media only screen and (device-width: 320px) and (orientation: portrait) {
+  /* insert styles here */
+}
+
+/* (320x480) Smartphone, Landscape */
+@media only screen and (device-width: 480px) and (orientation: landscape) {
+  /* insert styles here */
+}
+
+/* (480x800) Android */
+@media only screen and (min-device-width: 480px) and (max-device-width: 800px) {
+  /* insert styles here */
+}
+
+/* (640x960) iPhone 4 & 4S */
+@media only screen and (min-device-width: 640px) and (max-device-width: 960px) {
+  /* insert styles here */
+}
+
+/* (720x1280) Galaxy Nexus, WXGA */
+@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+  /* insert styles here */
+}
+
+/* (720x1280) Galaxy Nexus, Landscape */
+@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) and (orientation: landscape) {
+  /* insert styles here */
+}
+
+/* (1024x768) iPad 1 & 2, XGA */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* insert styles here */
+}
+
+/* (768x1024) iPad 1 & 2, Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* insert styles here */
+}
+
+/* (1024x768) iPad 1 & 2, Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* insert styles here */
+}
+
+/* (2048x1536) iPad 3 */
+@media only screen and (min-device-width: 1536px) and (max-device-width: 2048px) {
+  /* insert styles here */
+}
+
+/* (1280x720) Galaxy Note 2, WXGA */
+@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) {
+  /* insert styles here */
+}
+
+/* (1366x768) WXGA Display */
+@media  screen and (max-width: 1366px) {
+  /* insert styles here */
+}
+
+/* (1280x1024) SXGA Display */
+@media  screen and (max-width: 1280px) {
+  /* insert styles here */
+}
+
+/* (1440x900) WXGA+ Display */
+@media  screen and (max-width: 1440px) {
+
+}
+
+/* (1680x1050) WSXGA+ Display */
+@media  screen and (max-width: 1680px) {
+  /* insert styles here */
+}
+
+/* (1920x1080) Full HD Display */
+@media  screen and (max-width: 1920px) {
+  /* insert styles here */
+}
+
+/* (1600x900) HD+ Display */
+@media  screen and (max-width: 1600px) {
+  /* insert styles here */
 }
