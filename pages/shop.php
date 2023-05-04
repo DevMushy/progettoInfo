@@ -131,11 +131,11 @@ if (isset($_SESSION["idUser"])) {
 
               $image = $row['img'];
 
-              echo "<div class='col-md-3'>";
+              echo "<div class='col-md-3 cartCard'>";
               echo "<div class='card'>";
               echo "<img src='$image'/>";
               echo "<p>" . $row["nome"] . "</p>";
-              echo "<p>" . $row["prezzo"] . "</p>";
+              echo "<p>" . $row["prezzo"] . "$</p>";
               echo "</div>";
               echo "</div>";
 
@@ -147,7 +147,7 @@ if (isset($_SESSION["idUser"])) {
             $row = $result->fetch_assoc();
 
 
-            echo "<h3>Totale: " . $row["prezzo"] . "</h3>";
+            echo "<h3>Totale: " . $row["prezzo"] . "$</h3>";
 
           } else {
             echo "<h3>Carrello Vuoto</h3>";
@@ -225,12 +225,10 @@ if (isset($_SESSION["idUser"])) {
           echo "<p>" . $row["prezzo"] ."$". "</p>";
           echo "   <form action='../utility/addCart.php' method='post'>";
           echo "     <input type='number' name='idprodotto' value=" . $row["ID"] . " hidden>";
-          echo "     <input type='submit'>";
+          echo "     <input value='Aggiungi al carrello' type='submit' class='inputS'>";
           echo "  </form>";
           echo "</div>";
           echo "</div>";
-
-
         }
         echo "</div>";
       }
@@ -238,28 +236,37 @@ if (isset($_SESSION["idUser"])) {
       ?>
 </div>
       <br />
-
+      <hr class="line">
+      <center class="ringrShop title">
+        Grazie per aver scelto Ninotchka!
+      </center>
       <!--end-->
 
-      <footer class="foo">
-        <div class="container-fluid grid">
-          <center class="row">
-            <div class="col-6">
-              <span style="font-size: 175%">Socials:</span><br>
-              Instagram<br>
-              Twitter<br>
-              Facebook
-            </div>
-
-            <div class="col-6">
-              <span style="font-size: 175%">Contatti:</span><br>
-              <a href="tel:+3237921853">Mirko Ragusa</a><br>
-              <a href="tel:+3927169012">Alessandro Ferretti</a><br>
-              <a href="tel:+3445783841">Gabriele Duka</a>
-            </div>
-          </center>
+      <!-- footer -->
+  <footer class="foo">
+    <div class="container-fluid grid">
+      <center class="row">
+        <div class="col-4">
+          <span style="font-size: 125%">Socials:</span><br>
+          Coming soon...
         </div>
-      </footer>
+
+        <div class="col-4">
+          <span style="font-size: 125%">Contatti Negozio:</span><br>
+          <a href="tel:+0553980029">+0553980029</a><br>
+          <a href="mailto:info@firenzestreetart.com">info@firenzestreetart.com</a><br>
+          Via Masaccio 105 - Firenze - IT
+        </div>
+
+        <div class="col-4">
+          <span style="font-size: 125%">Contatti Staff:</span><br>
+          <a href="tel:+3237921853">Mirko Ragusa</a><br>
+          <a href="tel:+3927169012">Alessandro Ferretti</a><br>
+          <a href="tel:+3445783841">Gabriele Duka</a>
+        </div>
+      </center>
+    </div>
+  </footer>
 
 </body>
 <script src="../js/index.js"></script>

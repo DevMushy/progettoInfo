@@ -137,11 +137,11 @@ if (isset($_SESSION["idUser"])) {
 
               $image = $row['img'];
 
-              echo "<div class='col-md-3'>";
-              echo "<div class='card-c'>";
-              echo "<img class='card-bg' src='$image'/>";
+              echo "<div class='col-md-3 cartCard'>";
+              echo "<div class='card'>";
+              echo "<img src='$image'/>";
               echo "<p>" . $row["nome"] . "</p>";
-              echo "<p>" . $row["prezzo"]."$" . "</p>";
+              echo "<p>" . $row["prezzo"] . "$</p>";
               echo "</div>";
               echo "</div>";
 
@@ -215,7 +215,7 @@ if (isset($_SESSION["idUser"])) {
               <p>Spray</p>
               <form action="./pages/shop.php" method="post">
                 <input type="number" name="filtro" value="1" hidden>
-                <input type="submit">
+                <input value="Visualizza" class="inputS" type="submit"></input>
               </form>
             </div>
           </div>
@@ -225,7 +225,7 @@ if (isset($_SESSION["idUser"])) {
               <p>Marker</p>
               <form action="./pages/shop.php" method="post">
                 <input type="number" name="filtro" value="2" hidden>
-                <input type="submit">
+                <input value="Visualizza" class="inputS" type="submit">
               </form>
             </div>
           </div>
@@ -235,7 +235,7 @@ if (isset($_SESSION["idUser"])) {
               <p>Vestiti</p>
               <form action="./pages/shop.php" method="post">
                 <input type="number" name="filtro" value="3" hidden>
-                <input type="submit">
+                <input value="Visualizza" class="inputS" type="submit">
               </form>
             </div>
           </div>
@@ -244,10 +244,10 @@ if (isset($_SESSION["idUser"])) {
     </center>
   </div>
   <!--end-->
-  <br />
-  <hr class="line">
+  <br /><br />
+  <hr class="line" />
   <div class="title logo">La Nostra Storia</div>
-  <p class="story"><b>A partire dal 2007, il negozio Ninotchka è diventato un punto di riferimento per gli amanti di questa
+  <p class="story" align="justify"><b>A partire dal 2007, il negozio Ninotchka è diventato un punto di riferimento per gli amanti di questa
     cultura, offrendo una vasta selezione di abbigliamento, scarpe e accessori di marche e designer internazionali.
 
     Il negozio non si limita solo a vendere capi di abbigliamento e accessori, ma è anche un punto di incontro per gli
@@ -258,7 +258,19 @@ if (isset($_SESSION["idUser"])) {
     gamma di prodotti, gli artisti di strada possono esprimere la loro creatività in modo ancora più libero e
     originale.Ninotchka è molto più di un semplice negozio di abbigliamento e accessori.È un luogo di incontro per gli
     appassionati della cultura urbana e una fonte di ispirazione per tutti coloro che vogliono esprimersi in modo
-    originale ed autentico.<b></p>
+    originale ed autentico.<b>
+  </p>
+  <br />
+  <hr class="line">
+  <div class="title logo">Vieni a trovarci!</div>
+  <br />
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.101251538899!2d11.260101299999997!3d43.770756999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a54068bf328b1%3A0x85895d69615e8db4!2sNinotchka!5e0!3m2!1sit!2sit!4v1681407261881!5m2!1sit!2sit"
+      width="500" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 
   <br />
 
@@ -266,30 +278,24 @@ if (isset($_SESSION["idUser"])) {
   <footer class="foo">
     <div class="container-fluid grid">
       <center class="row">
-
         <div class="col-4">
-          <span style="font-size: 175%">Socials:</span><br>
-          Instagram<br>
-          Twitter<br>
-          Facebook
+          <span style="font-size: 125%">Socials:</span><br>
+          Coming soon...
         </div>
 
         <div class="col-4">
-          <span style="font-size: 175%">Contatti:</span><br>
+          <span style="font-size: 125%">Contatti Negozio:</span><br>
+          <a href="tel:+0553980029">+0553980029</a><br>
+          <a href="mailto:info@firenzestreetart.com">info@firenzestreetart.com</a><br>
+          Via Masaccio 105 - Firenze - IT
+        </div>
+
+        <div class="col-4">
+          <span style="font-size: 125%">Contatti Staff:</span><br>
           <a href="tel:+3237921853">Mirko Ragusa</a><br>
           <a href="tel:+3927169012">Alessandro Ferretti</a><br>
           <a href="tel:+3445783841">Gabriele Duka</a>
         </div>
-
-        <div class="col-4">
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.101251538899!2d11.260101299999997!3d43.770756999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a54068bf328b1%3A0x85895d69615e8db4!2sNinotchka!5e0!3m2!1sit!2sit!4v1681407261881!5m2!1sit!2sit"
-              width="500" height="250" style="border: 0" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-
       </center>
     </div>
   </footer>
