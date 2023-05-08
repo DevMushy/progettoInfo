@@ -106,7 +106,7 @@ if (isset($_SESSION["idUser"])) {
           </svg>
         </div>
         <div class="logo mt-2 col-4">
-          <a href="./index.html"><img src="./images/logo 2.png" /></a>
+          <a href="./"><img src="./images/logo 2.png" /></a>
         </div>
         <div class="logo-s mt-2 col-4">
           <svg onclick="openNav2()" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor"

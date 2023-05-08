@@ -16,9 +16,6 @@ if (isset($_POST["nome"])) {
         die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 }
 
-
-var_dump($query);
-var_dump($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -11,7 +11,7 @@ if(isset($_SESSION["idUser"])){
     
     $result = $conn->query($query) or
     die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
-    header("Location:../index.php");    
+    header("Location:../pages/shop.php");    
 }else{
     echo '<h1>ricorda di effettuare il login prima di aggiungere al carrello un prodotto</h1>';
     echo '<a href="../index.php">torna alla home...</a>';
